@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/EcoAutoParts/static/css/main.ef8dae17.chunk.css",
+    "main.js": "/EcoAutoParts/static/js/main.15bee032.chunk.js",
+    "main.js.map": "/EcoAutoParts/static/js/main.15bee032.chunk.js.map",
+    "runtime-main.js": "/EcoAutoParts/static/js/runtime-main.ac32a7da.js",
+    "runtime-main.js.map": "/EcoAutoParts/static/js/runtime-main.ac32a7da.js.map",
+    "static/js/2.7fe5530d.chunk.js": "/EcoAutoParts/static/js/2.7fe5530d.chunk.js",
+    "static/js/2.7fe5530d.chunk.js.map": "/EcoAutoParts/static/js/2.7fe5530d.chunk.js.map",
+    "static/js/3.8f66a668.chunk.js": "/EcoAutoParts/static/js/3.8f66a668.chunk.js",
+    "static/js/3.8f66a668.chunk.js.map": "/EcoAutoParts/static/js/3.8f66a668.chunk.js.map",
+    "index.html": "/EcoAutoParts/index.html",
+    "static/css/main.ef8dae17.chunk.css.map": "/EcoAutoParts/static/css/main.ef8dae17.chunk.css.map",
+    "static/js/2.7fe5530d.chunk.js.LICENSE.txt": "/EcoAutoParts/static/js/2.7fe5530d.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ac32a7da.js",
+    "static/js/2.7fe5530d.chunk.js",
+    "static/css/main.ef8dae17.chunk.css",
+    "static/js/main.15bee032.chunk.js"
+  ]
+}
