@@ -27,6 +27,7 @@ h2 {
 }
 
 .navBar {
+  display: flex;
   background-color: #a445b2;
 }
 
@@ -93,6 +94,13 @@ label {
   margin-top: 2rem;
 }
 
+.button.cancelar,
+.button.button.cancelar:hover {
+  background-color: #6a556d;
+  color: white;
+  margin-top: 2rem;
+}
+
 .alerta-error {
   background-color: white;
   color: red;
@@ -105,4 +113,28 @@ label {
 
 #input[type="file"] {
   display: none;
+}
+
+.label {
+  width: 100%;
+  margin-top: 1rem;
+  /* display: flex;
+  justify-content: center; */
+}
+
+.imagen {
+  margin: auto;
+  width: 200px;
+  height: 50px;
+  color: white;
+  border-radius: 10px;
+  background-color: black;
+  text-align: center;
+  cursor: pointer;
+}
+
+.img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
 }

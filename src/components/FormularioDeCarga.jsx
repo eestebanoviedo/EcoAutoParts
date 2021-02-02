@@ -1,8 +1,10 @@
 import React,{Fragment,useState} from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import PropTypes from 'prop-types';
+import { ToastContainer, toast } from 'react-toastify';
 
-const Formulario = ({crearProducto}) => {
+
+const FormularioDeCarga = ({crearProducto}) => {
     const[producto,actualizarProducto] = useState({
         nombreProducto:'',
         fecha:new Date().toLocaleDateString(),
@@ -64,14 +66,34 @@ const Formulario = ({crearProducto}) => {
     })
     }
 
+    const notify = () =>toast.success('Producto Guardado!', {
+        position: "top-right",
+        autoClose: 3500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        });;
+
 
     return (
         <Fragment>
             <h2>Crear Producto</h2>
-            {error ? <p className="alerta-error">Todos los campos son obligatorios</p> : null}
-            <form
-            onSubmit={submitProducto}
-            >   
+            {error ? <p className="alerta-error">Todos los campos son obligatorios</p> : <ToastContainer
+                                                                                     position="top-right"
+                                                                                     autoClose={3500}
+                                                                                     hideProgressBar={false}
+                                                                                     newestOnTop={false}
+                                                                                     closeOnClick
+                                                                                     rtl={false}
+                                                                                     pauseOnFocusLoss
+                                                                                     draggable
+                                                                                     pauseOnHover
+                                                                                     />
+            }
+
+            <form onSubmit={submitProducto}>   
                 <label>Nombre Producto</label>
                 <input 
                 type="text"
@@ -103,7 +125,7 @@ const Formulario = ({crearProducto}) => {
          
             <label>Agregar imagen</label>
 				<div>
-					 <img src={picture }  alt=''width="100" height="100"></img>
+					 <img src={picture } id="img" className="img" alt=''></img>
 				</div>
                 
                 <input type="file" 
@@ -111,13 +133,21 @@ const Formulario = ({crearProducto}) => {
                         className="u-full-width"
                         name="imagen"
                         key={Date.now()}
-                        onChange={onChangePicture} />
-                
+                        onChange={onChangePicture} 
+                        id="input"/>
+                        
+                 <div className="label">
+                    <label className="imagen" htmlFor="input">
+						<i className="material-icons">add_photo_alternate</i>
+						Elija la imagen del producto 
+					</label>
+          </div>
+			
                 <button
                 type="submit"
                 className="u-full-width button-primary"
-            >Agregar Producto</button>
-
+                onClick={notify}>Agregar Producto</button>
+        
             </form>
 
             
@@ -125,10 +155,10 @@ const Formulario = ({crearProducto}) => {
     );
 }
 
-Formulario.propTypes={
+FormularioDeCarga.propTypes={
     crearProducto:PropTypes.func.isRequired
 }
 
-export default Formulario;
+export default FormularioDeCarga;
 
 
