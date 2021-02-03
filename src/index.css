@@ -118,8 +118,8 @@ label {
 .label {
   width: 100%;
   margin-top: 1rem;
-  /* display: flex;
-  justify-content: center; */
+  display: flex;
+  justify-content: center;
 }
 
 .imagen {
@@ -137,4 +137,16 @@ label {
   width: 150px;
   height: 150px;
   object-fit: cover;
+}
+
+.card-style {
+  max-width: 30%;
+}
+
+.stilo {
+  /* max-width: 30%; */
+  background: red;
+  width: 600px;
+  /* Control de la altura con base en el texto del div*/
+  height: auto;
 }

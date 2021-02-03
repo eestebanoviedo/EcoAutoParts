@@ -28,17 +28,9 @@ const Producto = ({producto,eliminarProducto}) => {
     };
 
  return(  
-    <div >
-        {/* <p>Producto: <span>{producto.nombreProducto}</span></p>
-        <p>Fecha: <span>{producto.fecha}</span></p>
-        <p>Imagen: <span><img src={producto.imagen}  alt=''width="100" height="100"></img></span></p>
-        <p>Descripcion: <span>{producto.descripcion}</span></p>
-
-       */}
-
-   
-
-<Card style={{ width: '18rem' }}>
+    <div className="producto">
+ 
+<Card style={{width: '18rem' }}>
   <Card.Img variant="top" src={producto.imagen}/>
   <Card.Body>
     <Card.Title>{producto.nombreProducto}</Card.Title>
@@ -49,6 +41,15 @@ const Producto = ({producto,eliminarProducto}) => {
   <ListGroup className="list-group-flush">
     <ListGroupItem>{producto.fecha}</ListGroupItem>
   </ListGroup>
+
+  {/* <Card style={{display: 'flex', flexDirection: 'row'}}className="card-style">
+        <Card.Img  src={producto.imagen}alt="Card image cap" />
+        <Card.Body>
+          <Card.Title >{producto.nombreProducto}</Card.Title>
+          <Card.Subtitle>Fecha de ingreso: {producto.fecha}</Card.Subtitle>
+          <Card.Text className="stilo">descripcion: {producto.descripcion}</Card.Text>
+        </Card.Body> */}
+
 
   <Card.Body>
     <Card.Link href="#"> <button onClick={showModal}>Eliminar</button>
@@ -66,15 +67,18 @@ const Producto = ({producto,eliminarProducto}) => {
         <button className="button cancelar u-full-width" onClick={hideModal}>Cancelar</button>  
         </Modal.Footer>
       </Modal>
-
-      </Card.Link>
+    </Card.Link>
   </Card.Body>
 </Card>
-<Container>
+
+{/* <Container>
   <Row>
     <Col>1 of 1</Col>
+    <Col>1 of 1</Col>
+    <Col>1 of 1</Col>
+    <Col>1 of 1</Col>
   </Row>
-</Container>
+</Container> */}
     </div>
     
 )};
