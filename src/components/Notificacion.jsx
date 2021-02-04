@@ -13,3 +13,13 @@ function App(){
     </div>
   );
 }
+
+
+  {/* <Card style={{display: 'flex', flexDirection: 'row'}}className="card-style">
+        <Card.Img  src={producto.imagen}alt="Card image cap" />
+        <Card.Body>
+          <Card.Title >{producto.nombreProducto}</Card.Title>
+          <Card.Subtitle>Fecha de ingreso: {producto.fecha}</Card.Subtitle>
+          <Card.Text className="stilo">descripcion: {producto.descripcion}</Card.Text>
+        </Card.Body> */}
+

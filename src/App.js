@@ -4,6 +4,8 @@ import Producto from './components/Productos.jsx'
 import { BrowserRouter as Router, NavLink } from "react-router-dom"
 import Route from 'react-router-dom/Route'
 import 'react-toastify/dist/ReactToastify.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+
 
 function App() {
   let productosIniciales = JSON.parse(localStorage.getItem('productos'))
@@ -75,6 +77,7 @@ function App() {
                       <Producto
                         key={producto.id}
                         producto={producto}
+                        productos={productos}
                         eliminarProducto={eliminarProducto}
                       />
                     ))}
